@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Humaira Medical Center | Family Doctor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+<link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    <nav>
+      <h1>Humaira Medical Center</h1>
+      <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h2>Humaira Medical Center</h2>
+        <p>Helping to Build a Healthy Community</p>
+        <button onclick="document.getElementById('contact').scrollIntoView()">
+          Book an Appointment
+        </button>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="title">About Humaira Medical Center</h2>
+      <div class="about">
+        <div>
+          <p>
+            Dr. Humaira is a trusted family physician providing personalized
+            healthcare services.
+          </p>
+          <p><b>Education:</b> Medical School, Family Medicine</p>
+          <button>Read More</button>
+        </div>
+        <img src="./DR.jpg" alt="Doctor" />
+      </div>
+    </section>
+    <section class="medical-slider">
+      <h2 class="title">Our Medical Center</h2>
+
+      <div class="slider">
+        <div class="slider-track">
+          <!-- ORIGINAL -->
+          <img src="./images.jfif" />
+          <img src="/wa (1).jpg" />
+          <img src="./drm.jpg" />
+          <img src="/wa (2).jpg" />
+          <img src="./ro.jpg" />
+
+          <!-- DUPLICATE (FOR LOOP) -->
+          <img src="./images.jfif" />
+          <img src="/wa (1).jpg" />
+          <img src="./drm.jpg" />
+          <img src="/wa (2).jpg" />
+          <img src="./ro.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <h2 class="title">How Can I Help You</h2>
+      <div class="service-grid">
+        <div class="service">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <h4>Heart Check</h4>
+          <button>Book Now</button>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-user-doctor"></i>
+          <h4>Physical Exam</h4>
+          <button>Book Now</button>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-pills"></i>
+          <h4>Medication</h4>
+          <button>Book Now</button>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-syringe"></i>
+          <h4>Vaccination</h4>
+          <button>Book Now</button>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-people-roof"></i>
+          <h4>Family Planning</h4>
+          <button>Book Now</button>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-baby"></i>
+          <h4>Pediatric Care</h4>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="title">Get In Touch</h2>
+
+      <div class="contact-grid">
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Main Road, Medical Town,
+            Karachi
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+          <p><i class="fa-solid fa-envelope"></i> info@humairamedical.com</p>
+
+          <div class="contact-hours">
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 8:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <form class="contact-form" onsubmit="send(event)">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" />
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- MAP -->
+      <div class="map">
+        <iframe
+          src="https://maps.google.com/maps?q=Karachi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/03032861947"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <footer>© 2026 Humaira Medical Center</footer>
+    <!-- WHATSAPP BUTTON -->
+
+    <script>
+            const services = document.querySelectorAll(".service");
+      window.addEventListener("scroll", () => {
+        services.forEach((s) => {
+          if (s.getBoundingClientRect().top < window.innerHeight - 120) {
+            s.classList.add("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
